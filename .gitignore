@@ -1,2 +1,4 @@
 data/*/*.jpg
 .venv
+model.p
+data.pickle

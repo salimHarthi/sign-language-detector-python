@@ -1,5 +1,4 @@
-import pickle
-
+import pickle5 as pickle
 import cv2
 import mediapipe as mp
 import numpy as np
@@ -7,7 +6,7 @@ import numpy as np
 model_dict = pickle.load(open('./model.p', 'rb'))
 model = model_dict['model']
 
-cap = cv2.VideoCapture(2)
+cap = cv2.VideoCapture(0)
 
 mp_hands = mp.solutions.hands
 mp_drawing = mp.solutions.drawing_utils
