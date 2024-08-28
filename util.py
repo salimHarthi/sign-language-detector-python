@@ -12,7 +12,6 @@ def get_hand_reading(frame,model):
     x_ = []
     y_ = []
 
-
     H, W, _ = frame.shape
 
     frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)

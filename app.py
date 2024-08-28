@@ -6,13 +6,14 @@ from util import get_hand_reading
 model_dict = pickle.load(open('./model.p', 'rb'))
 model = model_dict['model']
 filp = True
-
-
-labels_dict = {0: 'A', 1: 'B', 2: 'L'}
+labels_dict = {}
+with open('classes.txt', 'r') as file:
+    for i,line in enumerate(file):
+        labels_dict[i] = line.strip()
+    file.close()
 
 # Use this line to capture video from the webcam
 cap = cv2.VideoCapture(0)
-
 
 # Set the title for the Streamlit app
 st.title("Video Capture with OpenCV")
@@ -30,11 +31,10 @@ while cap.isOpened():
         break
     if filp:
         frame = cv2.flip(frame,1)
-        
+
     # You can process the frame here if needed
     # e.g., apply filters, transformations, or object detection
-    prediction,x1, y1 = get_hand_reading(frame,model)
-  
+    prediction,x1, y1 = get_hand_reading(frame,model)  
 
     # Convert the frame from BGR to RGB format
     frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
