@@ -6,4 +6,4 @@ Sign language detector with Python, OpenCV and Mediapipe !
 
 ## run
 
-`$streamlit run app.py`
+`$ streamlit run app.py`
