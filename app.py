@@ -1,6 +1,6 @@
 import cv2
 import streamlit as st
-import pickle5 as pickle
+import pickle
 from util import get_hand_reading
 
 model_dict = pickle.load(open('./model.p', 'rb'))

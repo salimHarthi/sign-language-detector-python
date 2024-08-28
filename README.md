@@ -6,6 +6,8 @@ Sign language detector with Python, OpenCV and Mediapipe !
 
 # Train your own
 
+make sure to use python 3.10 and above
+
 ## collect data
 
 To start collecting data run
@@ -24,7 +26,7 @@ run
 ## Train your model
 
 run
-`python train_classifier`
+`python train_classifier.py`
 
 # Run the app
 
